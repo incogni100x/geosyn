@@ -111,7 +111,7 @@
             <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                 <!-- Text Content -->
                 <div class="flex-1">
-                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0061A9] mb-6 tracking-[-2px]">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0061A9] mb-6 tracking-[-1.7px]">
                         Data-Driven, Client-Focused Solutions
                     </h2>
                     <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -129,12 +129,123 @@
     <!-- Our Services Section -->
     <section class="py-12 md:py-16 px-4 md:px-[55px] bg-gray-50">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6 tracking-[-2px]">
+            <h2 class="text-xl font-bold text-black mb-6 tracking-[-1.2px] text-center">
                 Our Services
             </h2>
-            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-[#0061A9] mb-12">
                 We merge cutting-edge innovation with decades of expertise to deliver reliable, efficient solutions that maximize client profitability.
             </p>
+            
+            <!-- Services Carousel -->
+            <div class="relative overflow-hidden">
+                <div id="services-carousel" class="flex transition-transform duration-500 ease-in-out gap-8" style="transform: translateX(0);">
+                    <!-- Duplicate last 2 cards at the beginning for seamless loop -->
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
+                        <img src="constructionn.jpg" alt="Construction Aggregate" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Construction Aggregate</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We support clients in sourcing, evaluating, and developing construction aggregate projects. Whether for infrastructure, road building, or commercial supply, our team provides accurate market data, site assessments, and logistical planning to ensure optimal value extraction and long-term sustainability.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
+                        <img src="mineral.jpg" alt="Mineral Services" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mineral Exploration</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We provide comprehensive mineral exploration services to identify and evaluate potential mineral resources. Our team combines geological expertise with advanced technology to deliver accurate assessments and strategic recommendations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Mine Planning -->
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
+                        <img src="mine.jpg" alt="Mine Planning" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mine Planning</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We provide end-to-end mine planning services that ensure efficiency, safety, and profitability. From exploration strategy to production scheduling, our experts design practical and cost-effective plans that maximize resource recovery while minimizing environmental impact.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Consulting -->
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
+                        <img src="consulting.jpg" alt="Consulting" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Consulting</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We provide end-to-end mine planning services that ensure efficiency, safety, and profitability. From exploration strategy to production scheduling, our experts design practical and cost-effective plans that maximize resource recovery while minimizing environmental impact.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Construction Aggregate -->
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
+                        <img src="constructionn.jpg" alt="Construction Aggregate" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Construction Aggregate</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We support clients in sourcing, evaluating, and developing construction aggregate projects. Whether for infrastructure, road building, or commercial supply, our team provides accurate market data, site assessments, and logistical planning to ensure optimal value extraction and long-term sustainability.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Fourth Service -->
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
+                        <img src="mineral.jpg" alt="Mineral Services" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mineral Exploration</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We provide comprehensive mineral exploration services to identify and evaluate potential mineral resources. Our team combines geological expertise with advanced technology to deliver accurate assessments and strategic recommendations.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Duplicate first 2 cards at the end for seamless loop -->
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
+                        <img src="mine.jpg" alt="Mine Planning" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mine Planning</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We provide end-to-end mine planning services that ensure efficiency, safety, and profitability. From exploration strategy to production scheduling, our experts design practical and cost-effective plans that maximize resource recovery while minimizing environmental impact.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
+                        <img src="consulting.jpg" alt="Consulting" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Consulting</h4>
+                            <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                                We provide end-to-end mine planning services that ensure efficiency, safety, and profitability. From exploration strategy to production scheduling, our experts design practical and cost-effective plans that maximize resource recovery while minimizing environmental impact.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Carousel Navigation -->
+                <div class="flex items-center justify-center gap-4 mt-8">
+                    <!-- Left Arrow -->
+                    <button id="carousel-prev" class="w-10 h-10 rounded-full bg-[#0061A9] text-white flex items-center justify-center hover:bg-[#005088] transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- Dot Indicators -->
+                    <div id="carousel-dots" class="flex gap-2">
+                        <!-- Dots will be generated by JavaScript -->
+                    </div>
+                    
+                    <!-- Right Arrow -->
+                    <button id="carousel-next" class="w-10 h-10 rounded-full bg-[#0061A9] text-white flex items-center justify-center hover:bg-[#005088] transition-colors">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -145,6 +256,240 @@
         
         hamburgerBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Services Carousel
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('services-carousel');
+            if (!carousel) return;
+            
+            const cards = carousel.querySelectorAll('div');
+            let currentIndex = 2; // Start at first real card
+            let autoSlideInterval;
+            const realCardsCount = 4; // 4 real service cards
+            const startIndex = 2; // First real card index
+            
+            // Get navigation elements
+            const prevBtn = document.getElementById('carousel-prev');
+            const nextBtn = document.getElementById('carousel-next');
+            const dotsContainer = document.getElementById('carousel-dots');
+            
+            function getCardsPerView() {
+                return window.innerWidth >= 768 ? 3 : 1;
+            }
+            
+            function setCardWidths() {
+                const isDesktop = window.innerWidth >= 768;
+                
+                if (isDesktop && cards.length > 0) {
+                    // On desktop, calculate and set card width to ensure exactly 3 cards fit
+                    const container = carousel.parentElement;
+                    const containerWidth = container.offsetWidth;
+                    const gap = 32; // 2rem = 32px
+                    const totalGaps = gap * 2; // 2 gaps between 3 cards
+                    const cardWidth = (containerWidth - totalGaps) / 3;
+                    
+                    // Set width for all cards
+                    cards.forEach(card => {
+                        card.style.width = `${cardWidth}px`;
+                    });
+                } else {
+                    // Mobile: remove fixed width, let CSS handle it
+                    cards.forEach(card => {
+                        card.style.width = '';
+                    });
+                }
+            }
+            
+            function getRealPosition() {
+                // Convert carousel index to real position (0-based for dots)
+                if (currentIndex < startIndex) return 0;
+                return currentIndex - startIndex;
+            }
+            
+            function updateDots() {
+                if (!dotsContainer) return;
+                const isDesktop = window.innerWidth >= 768;
+                const cardsPerView = isDesktop ? 3 : 1;
+                const totalPositions = Math.max(1, realCardsCount - cardsPerView + 1);
+                
+                // Clear existing dots
+                dotsContainer.innerHTML = '';
+                
+                // Create dots for each position
+                for (let i = 0; i < totalPositions; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `w-2 h-2 rounded-full transition-all ${
+                        getRealPosition() === i ? 'bg-[#0061A9] w-6' : 'bg-gray-300'
+                    }`;
+                    dot.setAttribute('data-position', i);
+                    dot.addEventListener('click', () => goToPosition(i));
+                    dotsContainer.appendChild(dot);
+                }
+            }
+            
+            function goToPosition(position) {
+                const isDesktop = window.innerWidth >= 768;
+                if (isDesktop) {
+                    currentIndex = startIndex + position;
+                    updateCarousel();
+                    updateDots();
+                }
+            }
+            
+            function updateCarousel(instant = false) {
+                if (cards.length === 0) return;
+                
+                const cardsPerView = getCardsPerView();
+                const isDesktop = window.innerWidth >= 768;
+                
+                if (isDesktop) {
+                    // On desktop, use calculated card width
+                    const container = carousel.parentElement;
+                    const containerWidth = container.offsetWidth;
+                    const gap = 32;
+                    const totalGaps = gap * 2;
+                    const cardWidth = (containerWidth - totalGaps) / 3;
+                    const offset = -currentIndex * (cardWidth + gap);
+                    
+                    if (instant) {
+                        carousel.style.transition = 'none';
+                        carousel.style.transform = `translateX(${offset}px)`;
+                        setTimeout(() => {
+                            carousel.style.transition = '';
+                        }, 50);
+                    } else {
+                        carousel.style.transform = `translateX(${offset}px)`;
+                    }
+                } else {
+                    // Mobile: use card's actual width
+                    const firstCard = cards[0];
+                    if (!firstCard || firstCard.offsetWidth === 0) return;
+                    const gap = 32;
+                    const cardWidth = firstCard.offsetWidth;
+                    const offset = -currentIndex * (cardWidth + gap);
+                    carousel.style.transform = `translateX(${offset}px)`;
+                }
+                
+                // Update dots after carousel moves
+                updateDots();
+            }
+            
+            function nextSlide() {
+                const cardsPerView = getCardsPerView();
+                const isDesktop = window.innerWidth >= 768;
+                
+                if (isDesktop) {
+                    const maxRealIndex = startIndex + (realCardsCount - cardsPerView); // = 3
+                    
+                    // Normal forward movement
+                    currentIndex++;
+                    
+                    // If we've exceeded max position, continue forward through clones
+                    // then reset seamlessly during transition
+                    if (currentIndex > maxRealIndex) {
+                        // Start smooth transition forward (to clone position)
+                        updateCarousel();
+                        
+                        // Reset near the end of transition (at 90% completion)
+                        setTimeout(() => {
+                            currentIndex = startIndex;
+                            updateCarousel(true); // Instant reset (no transition)
+                        }, 450); // Reset at 90% of 500ms transition (450ms)
+                    } else {
+                        // Normal smooth transition
+                        updateCarousel();
+                    }
+                } else {
+                    // Mobile: count real cards (excluding clones)
+                    const maxIndex = Math.max(0, realCardsCount - 1);
+                    if (maxIndex <= 0) return;
+                    
+                    // Start from index 2 (first real card)
+                    if (currentIndex < startIndex) currentIndex = startIndex;
+                    
+                    currentIndex++;
+                    if (currentIndex > startIndex + maxIndex) {
+                        currentIndex = startIndex;
+                    }
+                    updateCarousel();
+                }
+            }
+            
+            function prevSlide() {
+                const cardsPerView = getCardsPerView();
+                const isDesktop = window.innerWidth >= 768;
+                
+                if (isDesktop) {
+                    const maxRealIndex = startIndex + (realCardsCount - cardsPerView); // = 3
+                    
+                    // Normal backward movement
+                    currentIndex--;
+                    
+                    // If we've gone below start, loop to the end
+                    if (currentIndex < startIndex) {
+                        currentIndex = maxRealIndex;
+                        updateCarousel();
+                    } else {
+                        updateCarousel();
+                    }
+                } else {
+                    // Mobile: backward movement
+                    const maxIndex = Math.max(0, realCardsCount - 1);
+                    if (maxIndex <= 0) return;
+                    
+                    if (currentIndex <= startIndex) {
+                        currentIndex = startIndex + maxIndex;
+                    } else {
+                        currentIndex--;
+                    }
+                    updateCarousel();
+                }
+            }
+            
+            // Arrow button handlers
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    clearInterval(autoSlideInterval);
+                    nextSlide();
+                    startAutoSlide();
+                });
+            }
+            
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    clearInterval(autoSlideInterval);
+                    prevSlide();
+                    startAutoSlide();
+                });
+            }
+            
+            // Start auto-slide
+            function startAutoSlide() {
+                clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(nextSlide, 4000);
+            }
+            
+            // Update on window resize
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    setCardWidths();
+                    currentIndex = 2; // Reset to first real card position
+                    updateCarousel();
+                    startAutoSlide();
+                }, 250);
+            });
+            
+            // Initial setup - start at index 2 (first real card after clones)
+            setTimeout(() => {
+                currentIndex = startIndex; // Start at first real card position
+                setCardWidths();
+                updateDots(); // Initialize dots
+                updateCarousel();
+                startAutoSlide();
+            }, 100);
         });
     </script>
 </body>
