@@ -1,5 +1,11 @@
 // Admin login with Supabase authentication
 import { supabase } from './client.js';
+import {
+  persistAdminSession,
+  redirectIfAuthenticated,
+  setSessionLoading,
+  clearSessionLoading,
+} from './session.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const loginForm = document.getElementById('login-form');
@@ -7,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!loginForm) return;
 
   // Check if already logged in
-  checkExistingSession();
+  redirectIfAuthenticated('/admin');
 
   loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -15,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const email = document.getElementById('username').value; // email field
     const password = document.getElementById('password').value;
     const submitBtn = loginForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
     
     if (!email || !password) {
       alert('Please enter both email and password');
@@ -24,8 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       // Disable button during login
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Signing in...';
+      setSessionLoading(submitBtn, 'Signing in...');
       
       // Supabase authentication
       const { data, error } = await supabase.auth.signInWithPassword({
@@ -35,32 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (error) throw error;
       
-      if (data.user) {
-        // Store session info
-        sessionStorage.setItem('adminLoggedIn', 'true');
-        sessionStorage.setItem('adminUser', data.user.email);
-        sessionStorage.setItem('adminUserId', data.user.id);
-        
-            // Redirect to admin dashboard
-            window.location.href = '/admin';
+      if (data?.session && data?.user) {
+        persistAdminSession(data.session);
+      } else if (data?.user) {
+        persistAdminSession({ user: data.user });
       }
+
+      window.location.href = '/admin';
     } catch (error) {
       console.error('Login error:', error);
       alert('Login failed: ' + error.message);
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
+      clearSessionLoading(submitBtn);
     }
   });
 });
-
-// Check if user is already logged in
-async function checkExistingSession() {
-  const { data: { session } } = await supabase.auth.getSession();
-  
-  if (session) {
-    sessionStorage.setItem('adminLoggedIn', 'true');
-    sessionStorage.setItem('adminUser', session.user.email);
-        sessionStorage.setItem('adminUserId', session.user.id);
-        window.location.href = '/admin';
-  }
-}
