@@ -190,61 +190,7 @@ function initServicesCarousel() {
   }
 
   let resizeTimeout;
-  
-function initAboutDropdown() {
-  const desktopToggle = document.getElementById('about-desktop-toggle');
-  const desktopMenu = document.getElementById('about-desktop-menu');
-  const mobileToggle = document.getElementById('about-mobile-toggle');
-  const mobileMenu = document.getElementById('about-mobile-menu');
-
-  const closeMenu = (menu, toggle) => {
-    if (!menu || !toggle) return;
-    if (!menu.classList.contains('hidden')) {
-      menu.classList.add('hidden');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  };
-
-  if (desktopMenu) {
-    desktopMenu.addEventListener('click', (event) => event.stopPropagation());
-  }
-
-  if (mobileMenu) {
-    mobileMenu.addEventListener('click', (event) => event.stopPropagation());
-  }
-
-  document.addEventListener('click', (event) => {
-    if (desktopMenu && desktopToggle && !desktopMenu.classList.contains('hidden')) {
-      if (!desktopMenu.contains(event.target) && !desktopToggle.contains(event.target)) {
-        closeMenu(desktopMenu, desktopToggle);
-      }
-    }
-
-    if (mobileMenu && mobileToggle && !mobileMenu.classList.contains('hidden')) {
-      if (!mobileMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
-        closeMenu(mobileMenu, mobileToggle);
-      }
-    }
-  });
-
-  if (desktopToggle && desktopMenu) {
-    desktopToggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const isHidden = desktopMenu.classList.toggle('hidden');
-      desktopToggle.setAttribute('aria-expanded', (!isHidden).toString());
-    });
-  }
-
-  if (mobileToggle && mobileMenu) {
-    mobileToggle.addEventListener('click', (event) => {
-      event.stopPropagation();
-      const isHidden = mobileMenu.classList.toggle('hidden');
-      mobileToggle.setAttribute('aria-expanded', (!isHidden).toString());
-    });
-  }
-}
-
-window.addEventListener('resize', () => {
+  window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
       setCardWidths();
@@ -256,11 +202,57 @@ window.addEventListener('resize', () => {
 
   setTimeout(() => {
     currentIndex = startIndex;
-    setCardWidths();
-    updateDots();
     updateCarousel();
     startAutoSlide();
   }, 100);
+}
+
+function initAboutDropdown() {
+  const desktopToggle = document.getElementById('about-desktop-toggle');
+  const desktopMenu = document.getElementById('about-desktop-menu');
+  const mobileToggle = document.getElementById('about-mobile-toggle');
+  const mobileMenu = document.getElementById('about-mobile-menu');
+
+  // Desktop dropdown toggle
+  if (desktopToggle && desktopMenu) {
+    desktopToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const isHidden = desktopMenu.classList.contains('hidden');
+      if (isHidden) {
+        desktopMenu.classList.remove('hidden');
+        desktopToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        desktopMenu.classList.add('hidden');
+        desktopToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+      const aboutContainer = desktopToggle.closest('li');
+      if (aboutContainer && !aboutContainer.contains(event.target)) {
+        desktopMenu.classList.add('hidden');
+        desktopToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // Mobile dropdown toggle
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 }
 
 function initCompaniesCarousel() {
