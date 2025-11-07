@@ -46,7 +46,7 @@
         }
         
         nav a:hover {
-            text-underline-offset: 6px;
+            text-underline-offset: 8px;
         }
     </style>
 </head>
@@ -56,41 +56,60 @@
     </div>
     
     <!-- Header Navigation -->
-    <header class="bg-white">
+            <header class="bg-white">
         <nav class="container mx-auto px-4 md:px-[55px] py-4 flex items-center justify-between">
-            <img src="logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
-            <!-- Desktop Navigation -->
-            <ul class="hidden md:flex flex-wrap justify-center gap-6 md:gap-8">
-                <li><a href="index.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Home</a></li>
-                <li><a href="about-us.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">About Us</a></li>
-                <li><a href="services.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Services</a></li>
-                <li><a href="our-safety-promise.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Our Safety Promise</a></li>
-                <li><a href="team.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Our Team</a></li>
-                <li><a href="contact.html" class="hover:text-[#FF6A0C] hover:underline transition-colors active-link">Contact</a></li>
+            <img src="/assets/logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
+            <ul class="hidden md:flex flex-wrap items-center gap-6 md:gap-8">
+                <li><a href="index.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Home</a></li>
+                <li class="relative">
+                    <div class="flex items-center gap-1">
+                        <a href="about-us.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">About Us</a>
+                        <button type="button" id="about-desktop-toggle" aria-haspopup="true" aria-expanded="false" class="p-1 transition-colors hover:text-[#FF6A0C] text-gray-700">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 9l6 6 6-6" /></svg>
+                        </button>
+                    </div>
+                    <div id="about-desktop-menu" class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 hidden z-20">
+                        <a href="about-us.html" class="block px-4 py-2 text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px]">About Us</a>
+                        <a href="team.html" class="block px-4 py-2 text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px]">Our Team</a>
+                    </div>
+                </li>
+                <li><a href="services.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Services</a></li>
+                <li><a href="our-safety-promise.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Our Safety Promise</a></li>
+                <li><a href="contact.html" class="text-[#FF6A0C] underline transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Contact</a></li>
             </ul>
-            <!-- Hamburger Menu Button -->
-            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2">
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" type="button">
                 <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
                 <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
                 <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <ul class="flex flex-col px-4 md:px-[55px] py-4 gap-4">
-                <li><a href="index.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Home</a></li>
-                <li><a href="about-us.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">About Us</a></li>
-                <li><a href="services.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Services</a></li>
-                <li><a href="our-safety-promise.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Our Safety Promise</a></li>
-                <li><a href="team.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Our Team</a></li>
-                <li><a href="contact.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors active-link py-2">Contact</a></li>
+                <li><a href="index.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Home</a></li>
+                <li>
+                    <div class="flex items-center justify-between">
+                        <a href="about-us.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">About Us</a>
+                        <button type="button" id="about-mobile-toggle" aria-haspopup="true" aria-expanded="false" class="p-2 transition-colors hover:text-[#FF6A0C] text-gray-700">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 9l6 6 6-6" /></svg>
+                        </button>
+                    </div>
+                    <div id="about-mobile-menu" class="mt-2 space-y-2 hidden">
+                        <a href="about-us.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px] pl-4 py-1">About Us</a>
+                        <a href="team.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px] pl-4 py-1">Our Team</a>
+                    </div>
+                </li>
+                <li><a href="services.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Services</a></li>
+                <li><a href="our-safety-promise.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Our Safety Promise</a></li>
+                <li><a href="contact.html" class="block text-[#FF6A0C] underline transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Contact</a></li>
             </ul>
         </div>
     </header>
-    
+
+
+
     <!-- Contact Hero Image -->
     <div class="relative w-full overflow-hidden">
-        <img src="contact.jpg" alt="Contact" class="w-full object-cover h-[600px] md:h-auto md:max-h-[550px]">
+        <img src="/assets/contact.jpg" alt="Contact" class="w-full object-cover h-[600px] md:h-auto md:max-h-[550px]">
         <div class="absolute inset-0 bg-black/40"></div>
         <div class="absolute inset-0 flex items-center justify-center px-4 md:px-[55px] z-10 py-8 md:py-0">
             <div class="max-w-4xl text-center mx-auto">
@@ -100,11 +119,11 @@
             </div>
         </div>
     </div>
-    
+
+    <!-- Contact Information & Form -->
     <section class="py-12 md:py-16 px-4 md:px-[55px]">
         <div class="container mx-auto max-w-6xl">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
-                <!-- Contact Details -->
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-[#0061A9] mb-6 tracking-[-1.6px]">Contact Information</h2>
                     <div class="space-y-8 text-lg md:text-xl text-gray-700 leading-relaxed">
@@ -127,8 +146,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Contact Form -->
                 <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 md:p-8">
                     <h3 class="text-2xl md:text-3xl font-bold text-[#0061A9] mb-6">Send Us a Message</h3>
                     <form class="space-y-5">
@@ -156,35 +173,27 @@
             </div>
         </div>
     </section>
-    
-    <script>
-        // Hamburger menu toggle
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        hamburgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-    </script>
-    
+
+            <script type="module" src="/src/main.js"></script>
+
     <!-- Footer -->
     <footer class="bg-black text-white py-12 md:py-16 px-4 md:px-[55px]">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col items-center text-center mb-8">
-                <img src="footerlogo.png" alt="Footer Logo" class="h-12 md:h-16 w-auto mb-4">
+                <img src="/assets/footerlogo.png" alt="Footer Logo" class="h-12 md:h-16 w-auto mb-4">
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                     From claim staking to market analysis, we help clients maximize the value of their mineral resource projects worldwide.
                 </p>
             </div>
-            
+
             <nav class="border-t border-gray-800 pt-8 mt-8">
                 <ul class="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
-                    <li><a href="index.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Home</a></li>
-                    <li><a href="about-us.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">About Us</a></li>
-                    <li><a href="services.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Services</a></li>
-                    <li><a href="our-safety-promise.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Our Safety Promise</a></li>
-                    <li><a href="team.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Our Team</a></li>
-                    <li><a href="contact.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Contact</a></li>
+                    <li><a href="index.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Home</a></li>
+                    <li><a href="about-us.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">About Us</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Services</a></li>
+                    <li><a href="our-safety-promise.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Our Safety Promise</a></li>
+                    <li><a href="team.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Our Team</a></li>
+                    <li><a href="contact.html" class="text-[#FF6A0C] underline hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Contact</a></li>
                 </ul>
             </nav>
         </div>

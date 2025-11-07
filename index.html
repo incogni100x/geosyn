@@ -46,7 +46,7 @@
         }
         
         nav a:hover {
-            text-underline-offset: 6px;
+            text-underline-offset: 8px;
         }
     </style>
 </head>
@@ -56,39 +56,61 @@
     </div>
     
     <!-- Header Navigation -->
-    <header class="bg-white">
+                <header class="bg-white">
         <nav class="container mx-auto px-4 md:px-[55px] py-4 flex items-center justify-between">
-            <img src="logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
-            <!-- Desktop Navigation -->
-            <ul class="hidden md:flex flex-wrap justify-center gap-6 md:gap-8">
-                <li><a href="#" class="hover:text-[#FF6A0C] hover:underline transition-colors active-link">Home</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">About Us</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Services</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Our Safety Promise</a></li>
-                <li><a href="#" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Contact</a></li>
+            <img src="/assets/logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
+            <ul class="hidden md:flex flex-wrap items-center gap-6 md:gap-8">
+                <li><a href="index.html" class="text-[#FF6A0C] underline transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Home</a></li>
+                <li class="relative">
+                    <div class="flex items-center gap-1">
+                        <a href="about-us.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">About Us</a>
+                        <button type="button" id="about-desktop-toggle" aria-haspopup="true" aria-expanded="false" class="p-1 transition-colors hover:text-[#FF6A0C] text-gray-700">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 9l6 6 6-6" /></svg>
+                        </button>
+                    </div>
+                    <div id="about-desktop-menu" class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 hidden z-20">
+                        <a href="about-us.html" class="block px-4 py-2 text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px]">About Us</a>
+                        <a href="team.html" class="block px-4 py-2 text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px]">Our Team</a>
+                    </div>
+                </li>
+                <li><a href="services.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Services</a></li>
+                <li><a href="our-safety-promise.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Our Safety Promise</a></li>
+                <li><a href="contact.html" class="text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] font-medium">Contact</a></li>
             </ul>
-            <!-- Hamburger Menu Button -->
-            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2">
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" type="button">
                 <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
                 <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
                 <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
             </button>
         </nav>
-        <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <ul class="flex flex-col px-4 md:px-[55px] py-4 gap-4">
-                <li><a href="#" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors active-link py-2">Home</a></li>
-                <li><a href="#" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">About Us</a></li>
-                <li><a href="#" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Services</a></li>
-                <li><a href="#" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Our Safety Promise</a></li>
-                <li><a href="#" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Contact</a></li>
+                <li><a href="index.html" class="block text-[#FF6A0C] underline transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Home</a></li>
+                <li>
+                    <div class="flex items-center justify-between">
+                        <a href="about-us.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">About Us</a>
+                        <button type="button" id="about-mobile-toggle" aria-haspopup="true" aria-expanded="false" class="p-2 transition-colors hover:text-[#FF6A0C] text-gray-700">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 9l6 6 6-6" /></svg>
+                        </button>
+                    </div>
+                    <div id="about-mobile-menu" class="mt-2 space-y-2 hidden">
+                        <a href="about-us.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px] pl-4 py-1">About Us</a>
+                        <a href="team.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] underline-offset-[8px] pl-4 py-1">Our Team</a>
+                    </div>
+                </li>
+                <li><a href="services.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Services</a></li>
+                <li><a href="our-safety-promise.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Our Safety Promise</a></li>
+                <li><a href="contact.html" class="block text-gray-700 transition-colors hover:text-[#FF6A0C] hover:underline underline-offset-[8px] py-2 font-medium">Contact</a></li>
             </ul>
         </div>
     </header>
+
+
+
     
     <!-- Hero Image -->
     <div class="relative w-full overflow-hidden">
-        <img src="hero.jpg" alt="Hero" class="w-full object-cover h-[600px] md:h-auto md:max-h-[550px]">
+        <img src="/assets/hero.jpg" alt="Hero" class="w-full object-cover h-[600px] md:h-auto md:max-h-[550px]">
         <div class="absolute inset-0 bg-black/40"></div>
         <div class="absolute inset-0 flex items-center justify-center px-4 md:px-[55px] z-10 py-8 md:py-0">
             <div class="max-w-4xl text-center mx-auto">
@@ -120,7 +142,7 @@
                 </div>
                 <!-- Image -->
                 <div class="flex-1">
-                    <img src="data.jpg" alt="Data-Driven Solutions" class="w-full h-auto rounded-lg object-cover">
+                    <img src="/assets/data.jpg" alt="Data-Driven Solutions" class="w-full h-auto rounded-lg object-cover">
                 </div>
             </div>
         </div>
@@ -141,7 +163,7 @@
                 <div id="services-carousel" class="flex transition-transform duration-500 ease-in-out gap-8" style="transform: translateX(0);">
                     <!-- Duplicate last 2 cards at the beginning for seamless loop -->
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
-                        <img src="constructionn.jpg" alt="Construction Aggregate" class="w-full h-48 object-cover">
+                        <img src="/assets/constructionn.jpg" alt="Construction Aggregate" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Construction Aggregate</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -150,7 +172,7 @@
                         </div>
                     </div>
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
-                        <img src="mineral.jpg" alt="Mineral Services" class="w-full h-48 object-cover">
+                        <img src="/assets/mineral.jpg" alt="Mineral Services" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mineral Exploration</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -161,7 +183,7 @@
                     
                     <!-- Mine Planning -->
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
-                        <img src="mine.jpg" alt="Mine Planning" class="w-full h-48 object-cover">
+                        <img src="/assets/mine.jpg" alt="Mine Planning" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mine Planning</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -172,7 +194,7 @@
                     
                     <!-- Consulting -->
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
-                        <img src="consulting.jpg" alt="Consulting" class="w-full h-48 object-cover">
+                        <img src="/assets/consulting.jpg" alt="Consulting" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Consulting</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -183,7 +205,7 @@
                     
                     <!-- Construction Aggregate -->
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
-                        <img src="constructionn.jpg" alt="Construction Aggregate" class="w-full h-48 object-cover">
+                        <img src="/assets/constructionn.jpg" alt="Construction Aggregate" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Construction Aggregate</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -194,7 +216,7 @@
                     
                     <!-- Fourth Service -->
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)]">
-                        <img src="mineral.jpg" alt="Mineral Services" class="w-full h-48 object-cover">
+                        <img src="/assets/mineral.jpg" alt="Mineral Services" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mineral Exploration</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -205,7 +227,7 @@
                     
                     <!-- Duplicate first 2 cards at the end for seamless loop -->
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
-                        <img src="mine.jpg" alt="Mine Planning" class="w-full h-48 object-cover">
+                        <img src="/assets/mine.jpg" alt="Mine Planning" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Mine Planning</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -214,7 +236,7 @@
                         </div>
                     </div>
                     <div class="bg-white rounded-lg overflow-hidden flex-shrink-0 w-full md:w-[calc((100%-4rem)/3)] carousel-clone">
-                        <img src="consulting.jpg" alt="Consulting" class="w-full h-48 object-cover">
+                        <img src="/assets/consulting.jpg" alt="Consulting" class="w-full h-48 object-cover">
                         <div class="p-6">
                             <h4 class="text-2xl leading-[28px] tracking-[-1.2px] font-bold text-[#0061A9] mb-4">Consulting</h4>
                             <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
@@ -285,7 +307,7 @@
     
     <!-- Mineral Exploration Section -->
     <section class="relative w-full overflow-hidden py-12 md:py-16">
-        <img src="mineralexploration.jpg" alt="Mineral Exploration" class="absolute inset-0 w-full h-full object-cover">
+        <img src="/assets/mineralexploration.jpg" alt="Mineral Exploration" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/50"></div>
         <div class="relative z-10 px-4 md:px-[55px]">
             <div class="container mx-auto max-w-6xl">
@@ -349,41 +371,41 @@
                 <div id="companies-carousel" class="flex transition-transform duration-500 ease-in-out gap-8" style="transform: translateX(0);">
                     <!-- Company logos will be duplicated for seamless loop -->
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com1.png" alt="Company 1" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com1.png" alt="Company 1" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com2.png" alt="Company 2" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com2.png" alt="Company 2" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com3.png" alt="Company 3" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com3.png" alt="Company 3" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com4.png" alt="Company 4" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com4.png" alt="Company 4" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com5.png" alt="Company 5" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com5.png" alt="Company 5" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com6.png" alt="Company 6" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com6.png" alt="Company 6" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com7.png" alt="Company 7" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com7.png" alt="Company 7" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center">
-                        <img src="com8.png" alt="Company 8" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com8.png" alt="Company 8" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <!-- Duplicate first 3-4 for seamless loop -->
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center company-clone">
-                        <img src="com1.png" alt="Company 1" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com1.png" alt="Company 1" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center company-clone">
-                        <img src="com2.png" alt="Company 2" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com2.png" alt="Company 2" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center company-clone">
-                        <img src="com3.png" alt="Company 3" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com3.png" alt="Company 3" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full md:w-[calc((100%-2rem)/3)] lg:w-[calc((100%-3rem)/4)] flex items-center justify-center company-clone">
-                        <img src="com4.png" alt="Company 4" class="max-h-20 md:max-h-24 object-contain">
+                        <img src="/assets/com4.png" alt="Company 4" class="max-h-20 md:max-h-24 object-contain">
                     </div>
                 </div>
             </div>
@@ -447,34 +469,34 @@
             <!-- Desktop: Show all 10 at once -->
             <div class="hidden md:grid grid-cols-5 lg:grid-cols-10 gap-6 md:gap-8">
                 <div class="flex items-center justify-center">
-                    <img src="mem1.png" alt="Member 1" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem1.png" alt="Member 1" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem2.png" alt="Member 2" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem2.png" alt="Member 2" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem3.png" alt="Member 3" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem3.png" alt="Member 3" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem4.png" alt="Member 4" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem4.png" alt="Member 4" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem5.jpg" alt="Member 5" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem5.jpg" alt="Member 5" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem6.png" alt="Member 6" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem6.png" alt="Member 6" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem7.png" alt="Member 7" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem7.png" alt="Member 7" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem8.png" alt="Member 8" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem8.png" alt="Member 8" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem9.png" alt="Member 9" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem9.png" alt="Member 9" class="max-h-16 md:max-h-20 object-contain">
                 </div>
                 <div class="flex items-center justify-center">
-                    <img src="mem10.png" alt="Member 10" class="max-h-16 md:max-h-20 object-contain">
+                    <img src="/assets/mem10.png" alt="Member 10" class="max-h-16 md:max-h-20 object-contain">
                 </div>
             </div>
             
@@ -482,533 +504,70 @@
             <div class="md:hidden relative overflow-hidden">
                 <div id="members-carousel" class="flex transition-transform duration-500 ease-in-out gap-6" style="transform: translateX(0);">
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem1.png" alt="Member 1" class="max-h-16 object-contain">
+                        <img src="/assets/mem1.png" alt="Member 1" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem2.png" alt="Member 2" class="max-h-16 object-contain">
+                        <img src="/assets/mem2.png" alt="Member 2" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem3.png" alt="Member 3" class="max-h-16 object-contain">
+                        <img src="/assets/mem3.png" alt="Member 3" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem4.png" alt="Member 4" class="max-h-16 object-contain">
+                        <img src="/assets/mem4.png" alt="Member 4" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem5.jpg" alt="Member 5" class="max-h-16 object-contain">
+                        <img src="/assets/mem5.jpg" alt="Member 5" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem6.png" alt="Member 6" class="max-h-16 object-contain">
+                        <img src="/assets/mem6.png" alt="Member 6" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem7.png" alt="Member 7" class="max-h-16 object-contain">
+                        <img src="/assets/mem7.png" alt="Member 7" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem8.png" alt="Member 8" class="max-h-16 object-contain">
+                        <img src="/assets/mem8.png" alt="Member 8" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem9.png" alt="Member 9" class="max-h-16 object-contain">
+                        <img src="/assets/mem9.png" alt="Member 9" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center">
-                        <img src="mem10.png" alt="Member 10" class="max-h-16 object-contain">
+                        <img src="/assets/mem10.png" alt="Member 10" class="max-h-16 object-contain">
                     </div>
                     <!-- Duplicate first 2 for seamless loop -->
                     <div class="flex-shrink-0 w-full flex items-center justify-center member-clone">
-                        <img src="mem1.png" alt="Member 1" class="max-h-16 object-contain">
+                        <img src="/assets/mem1.png" alt="Member 1" class="max-h-16 object-contain">
                     </div>
                     <div class="flex-shrink-0 w-full flex items-center justify-center member-clone">
-                        <img src="mem2.png" alt="Member 2" class="max-h-16 object-contain">
+                        <img src="/assets/mem2.png" alt="Member 2" class="max-h-16 object-contain">
                     </div>
                 </div>
             </div>
         </div>
     </section>
     
-    <script>
-        // Hamburger menu toggle
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        hamburgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Services Carousel
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('services-carousel');
-            if (!carousel) return;
-            
-            const cards = carousel.querySelectorAll('div');
-            let currentIndex = 2; // Start at first real card
-            let autoSlideInterval;
-            const realCardsCount = 4; // 4 real service cards
-            const startIndex = 2; // First real card index
-            
-            // Get navigation elements
-            const prevBtn = document.getElementById('carousel-prev');
-            const nextBtn = document.getElementById('carousel-next');
-            const dotsContainer = document.getElementById('carousel-dots');
-            
-            function getCardsPerView() {
-                return window.innerWidth >= 768 ? 3 : 1;
-            }
-            
-            function setCardWidths() {
-                const isDesktop = window.innerWidth >= 768;
-                
-                if (isDesktop && cards.length > 0) {
-                    // On desktop, calculate and set card width to ensure exactly 3 cards fit
-                    const container = carousel.parentElement;
-                    const containerWidth = container.offsetWidth;
-                    const gap = 32; // 2rem = 32px
-                    const totalGaps = gap * 2; // 2 gaps between 3 cards
-                    const cardWidth = (containerWidth - totalGaps) / 3;
-                    
-                    // Set width for all cards
-                    cards.forEach(card => {
-                        card.style.width = `${cardWidth}px`;
-                    });
-                } else {
-                    // Mobile: remove fixed width, let CSS handle it
-                    cards.forEach(card => {
-                        card.style.width = '';
-                    });
-                }
-            }
-            
-            function getRealPosition() {
-                // Convert carousel index to real position (0-based for dots)
-                if (currentIndex < startIndex) return 0;
-                return currentIndex - startIndex;
-            }
-            
-            function updateDots() {
-                if (!dotsContainer) return;
-                const isDesktop = window.innerWidth >= 768;
-                const cardsPerView = isDesktop ? 3 : 1;
-                const totalPositions = Math.max(1, realCardsCount - cardsPerView + 1);
-                
-                // Clear existing dots
-                dotsContainer.innerHTML = '';
-                
-                // Create dots for each position
-                for (let i = 0; i < totalPositions; i++) {
-                    const dot = document.createElement('button');
-                    dot.className = `w-2 h-2 rounded-full transition-all ${
-                        getRealPosition() === i ? 'bg-[#0061A9] w-6' : 'bg-gray-300'
-                    }`;
-                    dot.setAttribute('data-position', i);
-                    dot.addEventListener('click', () => goToPosition(i));
-                    dotsContainer.appendChild(dot);
-                }
-            }
-            
-            function goToPosition(position) {
-                const isDesktop = window.innerWidth >= 768;
-                if (isDesktop) {
-                    currentIndex = startIndex + position;
-                    updateCarousel();
-                    updateDots();
-                }
-            }
-            
-            function updateCarousel(instant = false) {
-                if (cards.length === 0) return;
-                
-                const cardsPerView = getCardsPerView();
-                const isDesktop = window.innerWidth >= 768;
-                
-                if (isDesktop) {
-                    // On desktop, use calculated card width
-                    const container = carousel.parentElement;
-                    const containerWidth = container.offsetWidth;
-                    const gap = 32;
-                    const totalGaps = gap * 2;
-                    const cardWidth = (containerWidth - totalGaps) / 3;
-                    const offset = -currentIndex * (cardWidth + gap);
-                    
-                    if (instant) {
-                        carousel.style.transition = 'none';
-                        carousel.style.transform = `translateX(${offset}px)`;
-                        setTimeout(() => {
-                            carousel.style.transition = '';
-                        }, 50);
-                    } else {
-                        carousel.style.transform = `translateX(${offset}px)`;
-                    }
-                } else {
-                    // Mobile: use card's actual width
-                    const firstCard = cards[0];
-                    if (!firstCard || firstCard.offsetWidth === 0) return;
-                    const gap = 32;
-                    const cardWidth = firstCard.offsetWidth;
-                    const offset = -currentIndex * (cardWidth + gap);
-                    carousel.style.transform = `translateX(${offset}px)`;
-                }
-                
-                // Update dots after carousel moves
-                updateDots();
-            }
-            
-            function nextSlide() {
-                const cardsPerView = getCardsPerView();
-                const isDesktop = window.innerWidth >= 768;
-                
-                if (isDesktop) {
-                    const maxRealIndex = startIndex + (realCardsCount - cardsPerView); // = 3
-                    
-                    // Normal forward movement
-                    currentIndex++;
-                    
-                    // If we've exceeded max position, continue forward through clones
-                    // then reset seamlessly during transition
-                    if (currentIndex > maxRealIndex) {
-                        // Start smooth transition forward (to clone position)
-                        updateCarousel();
-                        
-                        // Reset near the end of transition (at 90% completion)
-                        setTimeout(() => {
-                            currentIndex = startIndex;
-                            updateCarousel(true); // Instant reset (no transition)
-                        }, 450); // Reset at 90% of 500ms transition (450ms)
-                    } else {
-                        // Normal smooth transition
-                        updateCarousel();
-                    }
-                } else {
-                    // Mobile: count real cards (excluding clones)
-                    const maxIndex = Math.max(0, realCardsCount - 1);
-                    if (maxIndex <= 0) return;
-                    
-                    // Start from index 2 (first real card)
-                    if (currentIndex < startIndex) currentIndex = startIndex;
-                    
-                    currentIndex++;
-                    if (currentIndex > startIndex + maxIndex) {
-                        currentIndex = startIndex;
-                    }
-                    updateCarousel();
-                }
-            }
-            
-            function prevSlide() {
-                const cardsPerView = getCardsPerView();
-                const isDesktop = window.innerWidth >= 768;
-                
-                if (isDesktop) {
-                    const maxRealIndex = startIndex + (realCardsCount - cardsPerView); // = 3
-                    
-                    // Normal backward movement
-                    currentIndex--;
-                    
-                    // If we've gone below start, loop to the end
-                    if (currentIndex < startIndex) {
-                        currentIndex = maxRealIndex;
-                        updateCarousel();
-                    } else {
-                        updateCarousel();
-                    }
-                } else {
-                    // Mobile: backward movement
-                    const maxIndex = Math.max(0, realCardsCount - 1);
-                    if (maxIndex <= 0) return;
-                    
-                    if (currentIndex <= startIndex) {
-                        currentIndex = startIndex + maxIndex;
-                    } else {
-                        currentIndex--;
-                    }
-                    updateCarousel();
-                }
-            }
-            
-            // Arrow button handlers
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    clearInterval(autoSlideInterval);
-                    nextSlide();
-                    startAutoSlide();
-                });
-            }
-            
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    clearInterval(autoSlideInterval);
-                    prevSlide();
-                    startAutoSlide();
-                });
-            }
-            
-            // Start auto-slide
-            function startAutoSlide() {
-                clearInterval(autoSlideInterval);
-                autoSlideInterval = setInterval(nextSlide, 4000);
-            }
-            
-            // Update on window resize
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    setCardWidths();
-                    currentIndex = 2; // Reset to first real card position
-                    updateCarousel();
-                    startAutoSlide();
-                }, 250);
-            });
-            
-            // Initial setup - start at index 2 (first real card after clones)
-            setTimeout(() => {
-                currentIndex = startIndex; // Start at first real card position
-                setCardWidths();
-                updateDots(); // Initialize dots
-                updateCarousel();
-                startAutoSlide();
-            }, 100);
-        });
-        
-        // Companies Carousel
-        document.addEventListener('DOMContentLoaded', function() {
-            const companiesCarousel = document.getElementById('companies-carousel');
-            if (!companiesCarousel) return;
-            
-            const allCompanies = companiesCarousel.querySelectorAll('div');
-            const realCompanies = companiesCarousel.querySelectorAll('div:not(.company-clone)');
-            let currentCompanyIndex = 0;
-            let autoSlideInterval;
-            
-            const realCompaniesCount = realCompanies.length; // 8 companies
-            const clonesCount = 4; // 4 cloned companies at the end
-            
-            function getCompaniesPerView() {
-                if (window.innerWidth >= 1024) return 4; // lg: 4 per view
-                if (window.innerWidth >= 768) return 3; // md: 3 per view
-                return 1; // mobile: 1 per view
-            }
-            
-            function setCompanyWidths() {
-                const companiesPerView = getCompaniesPerView();
-                const isMobile = window.innerWidth < 768;
-                
-                if (!isMobile && allCompanies.length > 0) {
-                    const container = companiesCarousel.parentElement;
-                    const containerWidth = container.offsetWidth;
-                    const gap = 32; // 2rem = 32px
-                    const totalGaps = gap * (companiesPerView - 1);
-                    const companyWidth = (containerWidth - totalGaps) / companiesPerView;
-                    
-                    allCompanies.forEach(company => {
-                        company.style.width = `${companyWidth}px`;
-                    });
-                } else {
-                    allCompanies.forEach(company => {
-                        company.style.width = '';
-                    });
-                }
-            }
-            
-            function updateCompaniesCarousel(instant = false) {
-                if (allCompanies.length === 0) return;
-                
-                const companiesPerView = getCompaniesPerView();
-                const isMobile = window.innerWidth < 768;
-                
-                if (isMobile) {
-                    const firstCompany = allCompanies[0];
-                    if (!firstCompany || firstCompany.offsetWidth === 0) return;
-                    const gap = 32;
-                    const companyWidth = firstCompany.offsetWidth;
-                    const offset = -currentCompanyIndex * (companyWidth + gap);
-                    
-                    if (instant) {
-                        companiesCarousel.style.transition = 'none';
-                        companiesCarousel.style.transform = `translateX(${offset}px)`;
-                        setTimeout(() => {
-                            companiesCarousel.style.transition = '';
-                        }, 50);
-                    } else {
-                        companiesCarousel.style.transform = `translateX(${offset}px)`;
-                    }
-                } else {
-                    const container = companiesCarousel.parentElement;
-                    const containerWidth = container.offsetWidth;
-                    const gap = 32;
-                    const totalGaps = gap * (companiesPerView - 1);
-                    const companyWidth = (containerWidth - totalGaps) / companiesPerView;
-                    const offset = -currentCompanyIndex * (companyWidth + gap);
-                    
-                    if (instant) {
-                        companiesCarousel.style.transition = 'none';
-                        companiesCarousel.style.transform = `translateX(${offset}px)`;
-                        setTimeout(() => {
-                            companiesCarousel.style.transition = '';
-                        }, 50);
-                    } else {
-                        companiesCarousel.style.transform = `translateX(${offset}px)`;
-                    }
-                }
-            }
-            
-            function nextCompanySlide() {
-                const companiesPerView = getCompaniesPerView();
-                const isMobile = window.innerWidth < 768;
-                
-                if (isMobile) {
-                    currentCompanyIndex++;
-                    if (currentCompanyIndex >= realCompaniesCount) {
-                        currentCompanyIndex = realCompaniesCount; // Move to first clone
-                        updateCompaniesCarousel();
-                        setTimeout(() => {
-                            currentCompanyIndex = 0;
-                            updateCompaniesCarousel(true);
-                        }, 450);
-                    } else {
-                        updateCompaniesCarousel();
-                    }
-                } else {
-                    const maxIndex = realCompaniesCount - companiesPerView;
-                    
-                    currentCompanyIndex++;
-                    
-                    if (currentCompanyIndex > maxIndex) {
-                        // Move to clone position
-                        updateCompaniesCarousel();
-                        setTimeout(() => {
-                            currentCompanyIndex = 0;
-                            updateCompaniesCarousel(true);
-                        }, 450);
-                    } else {
-                        updateCompaniesCarousel();
-                    }
-                }
-            }
-            
-            function startAutoSlide() {
-                clearInterval(autoSlideInterval);
-                autoSlideInterval = setInterval(nextCompanySlide, 3000); // 3 seconds
-            }
-            
-            // Update on window resize
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    setCompanyWidths();
-                    currentCompanyIndex = 0;
-                    updateCompaniesCarousel();
-                    startAutoSlide();
-                }, 250);
-            });
-            
-            // Initial setup
-            setTimeout(() => {
-                currentCompanyIndex = 0;
-                setCompanyWidths();
-                updateCompaniesCarousel();
-                startAutoSlide();
-            }, 100);
-        });
-        
-        // Members Carousel (Mobile only)
-        document.addEventListener('DOMContentLoaded', function() {
-            const membersCarousel = document.getElementById('members-carousel');
-            if (!membersCarousel) return;
-            
-            // Only run on mobile
-            if (window.innerWidth >= 768) return;
-            
-            const allMembers = membersCarousel.querySelectorAll('div');
-            const realMembers = membersCarousel.querySelectorAll('div:not(.member-clone)');
-            let currentMemberIndex = 0;
-            let autoSlideInterval;
-            
-            const realMembersCount = realMembers.length; // 10 members
-            
-            function updateMembersCarousel(instant = false) {
-                if (allMembers.length === 0) return;
-                
-                const firstMember = allMembers[0];
-                if (!firstMember || firstMember.offsetWidth === 0) return;
-                const gap = 24; // 1.5rem = 24px
-                const memberWidth = firstMember.offsetWidth;
-                const offset = -currentMemberIndex * (memberWidth + gap);
-                
-                if (instant) {
-                    membersCarousel.style.transition = 'none';
-                    membersCarousel.style.transform = `translateX(${offset}px)`;
-                    setTimeout(() => {
-                        membersCarousel.style.transition = '';
-                    }, 50);
-                } else {
-                    membersCarousel.style.transform = `translateX(${offset}px)`;
-                }
-            }
-            
-            function nextMemberSlide() {
-                currentMemberIndex++;
-                
-                if (currentMemberIndex >= realMembersCount) {
-                    // Move to first clone
-                    currentMemberIndex = realMembersCount;
-                    updateMembersCarousel();
-                    setTimeout(() => {
-                        currentMemberIndex = 0;
-                        updateMembersCarousel(true);
-                    }, 450);
-                } else {
-                    updateMembersCarousel();
-                }
-            }
-            
-            function startAutoSlide() {
-                clearInterval(autoSlideInterval);
-                autoSlideInterval = setInterval(nextMemberSlide, 3000); // 3 seconds
-            }
-            
-            // Update on window resize
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    if (window.innerWidth >= 768) {
-                        clearInterval(autoSlideInterval);
-                        return;
-                    }
-                    currentMemberIndex = 0;
-                    updateMembersCarousel();
-                    startAutoSlide();
-                }, 250);
-            });
-            
-            // Initial setup
-            setTimeout(() => {
-                currentMemberIndex = 0;
-                updateMembersCarousel();
-                startAutoSlide();
-            }, 100);
-        });
-    </script>
-    
+            <script type="module" src="/src/main.js"></script>
+
     <!-- Footer -->
     <footer class="bg-black text-white py-12 md:py-16 px-4 md:px-[55px]">
         <div class="container mx-auto max-w-6xl">
             <div class="flex flex-col items-center text-center mb-8">
-                <img src="footerlogo.png" alt="Footer Logo" class="h-12 md:h-16 w-auto mb-4">
+                <img src="/assets/footerlogo.png" alt="Footer Logo" class="h-12 md:h-16 w-auto mb-4">
                 <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
                     From claim staking to market analysis, we help clients maximize the value of their mineral resource projects worldwide.
                 </p>
             </div>
-            
+
             <nav class="border-t border-gray-800 pt-8 mt-8">
                 <ul class="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Home</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">About Us</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Services</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Our Safety Promise</a></li>
-                    <li><a href="#" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Contact</a></li>
+                    <li><a href="index.html" class="text-[#FF6A0C] underline hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Home</a></li>
+                    <li><a href="about-us.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">About Us</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Services</a></li>
+                    <li><a href="our-safety-promise.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Our Safety Promise</a></li>
+                    <li><a href="team.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Our Team</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base underline-offset-[8px]">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </footer>
 </body>
 </html>
-
