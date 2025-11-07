@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - GeoSyn</title>
+    
+    <!-- Import Roboto font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :root {
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .active-link {
+            color: #FF6A0C !important;
+            text-decoration: underline;
+            text-decoration-color: #FF6A0C;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 6px;
+        }
+        
+        .active-link:hover {
+            color: #FF6A0C !important;
+        }
+        
+        nav a:hover {
+            text-underline-offset: 6px;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="bg-[#003D60] text-white py-4 px-4 md:px-[55px]">
+        <p class="text-center text-sm md:text-base">Burgex Mining Consultants | Exploration Services | Construction Aggregate</p>
+    </div>
+    
+    <!-- Header Navigation -->
+    <header class="bg-white">
+        <nav class="container mx-auto px-4 md:px-[55px] py-4 flex items-center justify-between">
+            <img src="logo.png" alt="Logo" class="h-8 md:h-10 w-auto">
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex flex-wrap justify-center gap-6 md:gap-8">
+                <li><a href="index.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Home</a></li>
+                <li><a href="about-us.html" class="hover:text-[#FF6A0C] hover:underline transition-colors active-link">About Us</a></li>
+                <li><a href="services.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Services</a></li>
+                <li><a href="our-safety-promise.html" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Our Safety Promise</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors">Contact</a></li>
+            </ul>
+            <!-- Hamburger Menu Button -->
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2">
+                <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+                <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+                <span class="w-6 h-0.5 bg-gray-700 transition-all"></span>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <ul class="flex flex-col px-4 md:px-[55px] py-4 gap-4">
+                <li><a href="index.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Home</a></li>
+                <li><a href="about-us.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors active-link py-2">About Us</a></li>
+                <li><a href="services.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Services</a></li>
+                <li><a href="our-safety-promise.html" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Our Safety Promise</a></li>
+                <li><a href="#" class="block text-gray-700 hover:text-[#FF6A0C] hover:underline transition-colors py-2">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <!-- About Hero Image -->
+    <div class="relative w-full overflow-hidden">
+        <img src="aboutushero.jpg" alt="About Us" class="w-full object-cover h-[600px] md:h-auto md:max-h-[550px]">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-4 md:px-[55px] z-10 py-8 md:py-0">
+            <div class="max-w-4xl text-center mx-auto">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6 tracking-[-2.6px]">
+                    About Us
+                </h1>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Who We Are Section -->
+    <section class="py-12 md:py-16 px-4 md:px-[55px]">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="flex-1">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0061A9] mb-6 tracking-[-1.7px]">
+                        Who We Are
+                    </h2>
+                    <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700 mb-6">
+                        Geosyn RAP Consultants is a premier mining and resource consulting firm dedicated to helping clients discover, develop, and maximize the value of their mineral projects. With over 150 years of combined industry experience, our team of geologists, landmen, engineers, and consultants brings unmatched expertise to every project.
+                    </p>
+                    <p class="text-2xl leading-[28px] tracking-[-1.2px] text-gray-700">
+                        We have successfully staked over 25,800 mineral claims and supported more than 3,500 projects worldwide, building a proven track record of reliability, accuracy, and results. Our experience spans a wide range of projects, from early-stage exploration to large-scale aggregate and construction initiatives.
+                    </p>
+                    <a href="#" class="inline-flex items-center justify-center bg-[#FF6A0C] text-white font-semibold px-6 py-3 rounded mt-8 transition-colors hover:bg-[#e25900]">
+                        Meet Our Team
+                    </a>
+                </div>
+                <div class="flex-1">
+                    <img src="whoweare.jpg" alt="Who We Are" class="w-full h-auto rounded-lg object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="py-12 md:py-16 px-4 md:px-[55px] bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12">
+                <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#0061A9] mb-4 tracking-[-1.4px]">Our Mission</h3>
+                    <p class="text-xl md:text-2xl leading-[28px] tracking-[-1.1px] text-gray-700">
+                        To empower clients with the clarity, expertise, and strategies they need to unlock the full potential of their mineral and aggregate projects, while driving innovation and efficiency across the mining and exploration industry.
+                    </p>
+                </div>
+                <div class="bg-white rounded-lg shadow-sm p-8 border border-gray-200">
+                    <h3 class="text-3xl md:text-4xl font-bold text-[#0061A9] mb-4 tracking-[-1.4px]">Our Vision</h3>
+                    <p class="text-xl md:text-2xl leading-[28px] tracking-[-1.1px] text-gray-700">
+                        To be a global leader in mining and exploration consulting, known for precision, innovation, and trust. We strive to be the partner of choice for organizations advancing some of the world’s most valuable resource projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="py-12 md:py-16 px-4 md:px-[55px]">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0061A9] mb-8 tracking-[-1.7px]">Our Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-[#0061A9] mb-3">Integrity</h3>
+                    <p class="text-lg text-gray-700">Transparency and accountability in everything we do.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-[#0061A9] mb-3">Innovation</h3>
+                    <p class="text-lg text-gray-700">Applying modern technology to traditional industries.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-[#0061A9] mb-3">Sustainability</h3>
+                    <p class="text-lg text-gray-700">Promoting responsible exploration and resource development.</p>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                    <h3 class="text-2xl font-semibold text-[#0061A9] mb-3">Excellence</h3>
+                    <p class="text-lg text-gray-700">Delivering work that exceeds expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-12 md:py-16 px-4 md:px-[55px] bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="flex-1">
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0061A9] mb-6 tracking-[-1.7px]">
+                        Why Choose Us?
+                    </h2>
+                    <ul class="space-y-3 text-lg md:text-xl leading-relaxed text-gray-700">
+                        <li><span class="font-semibold text-[#0061A9]">Proven Track Record –</span> thousands of claims staked and projects delivered globally.</li>
+                        <li><span class="font-semibold text-[#0061A9]">Multidisciplinary Team –</span> geologists, engineers, and consultants working seamlessly.</li>
+                        <li><span class="font-semibold text-[#0061A9]">Cutting-Edge Tools –</span> advanced GIS, surveying, and market analysis methods.</li>
+                        <li><span class="font-semibold text-[#0061A9]">Global Reach –</span> projects across North America, Africa, Asia, and beyond.</li>
+                        <li><span class="font-semibold text-[#0061A9]">Client-Centered Approach –</span> solutions tailored to project size, location, and goals.</li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <img src="whychooseus.jpg" alt="Why Choose Us" class="w-full h-auto rounded-lg object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+        // Hamburger menu toggle
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 md:py-16 px-4 md:px-[55px]">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col items-center text-center mb-8">
+                <img src="footerlogo.png" alt="Footer Logo" class="h-12 md:h-16 w-auto mb-4">
+                <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    From claim staking to market analysis, we help clients maximize the value of their mineral resource projects worldwide.
+                </p>
+            </div>
+            
+            <nav class="border-t border-gray-800 pt-8 mt-8">
+                <ul class="flex flex-col md:flex-row flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
+                    <li><a href="index.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Home</a></li>
+                    <li><a href="about-us.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">About Us</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Services</a></li>
+                    <li><a href="our-safety-promise.html" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Our Safety Promise</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-[#FF6A0C] hover:underline transition-colors text-sm md:text-base">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
